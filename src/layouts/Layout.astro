@@ -1,0 +1,60 @@
+---
+import Footer from "../components/Footer.jsx";
+import Header from "../components/Header.jsx";
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header>
+			<Header client:visible/>
+		</header>
+		<main class="overflow-y-auto">
+			<slot />
+		</main>
+		<footer>
+			<Footer client:visible/>
+		</footer>
+	</body>
+</html>
+<style>
+body{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: "header" "main" "footer";
+	height: 100vh;
+}
+body header{
+	grid-area: header;
+}
+body main{
+	grid-area: main;
+}
+body footer{
+	grid-area: footer;
+}
+
+</style>
+
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background: white;
+		background-size: 224px;
+	}
+</style>

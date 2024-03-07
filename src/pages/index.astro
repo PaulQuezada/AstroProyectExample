@@ -1,0 +1,12 @@
+---
+import Body from '../components/Body.jsx';
+import Map from '../components/Map.jsx';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<Map client:visible />
+	</main>
+</Layout>
