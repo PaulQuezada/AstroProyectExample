@@ -13,7 +13,7 @@ export default function App() {
             <Card className="w-full space-y-5 p-4" radius="lg">
                 <Skeleton isLoaded={isLoaded} className="rounded-lg">
                     <div className="h-24 rounded-lg flex flex-row">
-                        <span class="my-auto material-symbols-outlined">
+                        <span className="my-auto material-symbols-outlined">
                             package_2
                         </span>
                         <h1 className="my-auto mr-5"> Post 1</h1>

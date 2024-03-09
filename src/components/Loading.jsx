@@ -2,7 +2,8 @@ import React from 'react';
 
 const Loader = () => {
   return (
-    <div className="loader">
+    
+    <div className="absolute w-screen h-screen inset-0 bg-[#d3a26e] loader">
       <style>
         {`
           .loader {

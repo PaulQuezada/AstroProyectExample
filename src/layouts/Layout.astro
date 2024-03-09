@@ -20,13 +20,13 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<header>
+		<header >
 			<Header client:visible/>
 		</header>
 		<main class="overflow-y-auto">
 			<slot />
 		</main>
-		<footer>
+		<footer class="sticky bottom-0 w-full">
 			<Footer client:visible/>
 		</footer>
 	</body>

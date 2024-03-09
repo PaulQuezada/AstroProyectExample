@@ -1,0 +1,30 @@
+.page1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: left 0.5s ease;
+}
+.page2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: left 0.5s ease;
+}
+
+.page1.active {
+    left: 0;
+}
+.page1.inactive {
+    left: -100%;
+}
+.page2.active {
+    left: 0;
+}
+.page2.inactive {
+    left: 100%;
+}
+

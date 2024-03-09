@@ -4,25 +4,31 @@ export default function Footer() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     return (
         <>
-            <div className='shadow p-2'>
+            <div className='bg-white shadow p-2'>
                 <div className='w-3/4 mx-auto flex flex-row justify-between text-[#7f7e8a]'>
-                    <button className='flex flex-col'>
+                    <button className='flex flex-col' onClick={() => {
+                        window.location.href = '/principal';
+                    }}>
                         <span className="material-symbols-outlined mx-auto hover:text-[#010607]">
                             home
                         </span>
                         <p className='text-xs'>Inicio</p>
                     </button>
-                    <button onClick={onOpen}>
+                    <button className='flex flex-col'
+                        onClick={() => {
+                            window.location.href = '/explore';
+                        }}>
+                        <span class="material-symbols-outlined mx-auto hover:text-[#010607]">
+                            travel_explore
+                        </span>
+
+                        <p className='text-xs'>Explorar</p>
+                    </button>
+                    <button className='flex flex-col' onClick={onOpen}>
                         <span className="material-symbols-outlined mx-auto hover:text-[#010607]">
                             person
                         </span>
                         <p className='text-xs'>Perfil</p>
-                    </button>
-                    <button className='flex flex-col'>
-                        <span className="mx-auto material-symbols-outlined">
-                            sell
-                        </span>
-                        <p className='text-xs'>Descuentos</p>
                     </button>
                     <Modal
                         isOpen={isOpen}
